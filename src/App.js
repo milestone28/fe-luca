@@ -1,12 +1,15 @@
-import Nav from "./components/Nav";
+import Nav from "./Components/Navbar/Nav";
+import "./App.css"
 
 function App() {
   return (
     <>
-      <div className="w-full h-screen bg-red-500">
-        <Nav />
+    <Nav />
+      <div className="app">
+       
+        {/* <hr /> */}
       </div>
-    </>
+      </>
   );
 }
 
