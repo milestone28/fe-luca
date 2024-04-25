@@ -5,11 +5,10 @@ const Featured = () => {
   return (
     <div className="featured">
       <div className="left">
-        <div>
-          <p>Handmade Bakery, </p>
-          <p>Brunch &</p>
-          <p>Coffee</p>
-        </div>
+          <h1>Handmade Bakery, 
+          <br/>Loaves...
+          </h1>
+          <p>We make real bread from the best organic ingredients <br />- by hand, with dedication and with the best of care.</p>
         <div className="menu-button">
           <div>See Our Menu</div>
         </div>

@@ -1,8 +1,8 @@
-import React, {  useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import useOnclickOutside from "react-cool-onclickoutside";
 import "./Nav.css";
 import logo from "../Assets/bread.png";
-import { Link, useLocation } from "react-router-dom"; 
+import { Link, useLocation } from "react-router-dom";
 
 const Nav = () => {
   const [menu, setMenu] = useState("home");
@@ -26,50 +26,67 @@ const Nav = () => {
     <div className={active || pathname !== "/" ? "navbar active" : "navbar"}>
       <div className="nav-logo">
         <img src={logo} alt="" />
-        <p>Luka's Loaves</p>
+        <p><span>L</span>uka's <span>L</span>oaves</p>
       </div>
+
+      <div className="right-menu">
+
       <ul className={`nav-menu ${open ? "open" : ""}`} ref={ref}>
         <li
           onClick={() => {
             setMenu("home");
           }}
         >
-          <Link to='/'>Home</Link>{menu === "home" ? <hr /> : <></>}
+          <Link to="/">Home</Link>
+          {menu === "home" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
             setMenu("menu");
           }}
         >
-          <Link to='/menu'>Menu</Link>{menu === "menu" ? <hr /> : <></>}
+          <Link to="/menu">Menu</Link>
+          {menu === "menu" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
             setMenu("about");
           }}
         >
-          <Link to='/aboutus'>About Us</Link>{menu === "about" ? <hr /> : <></>}
+          <Link to="/aboutus">About Us</Link>
+          {menu === "about" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
             setMenu("contact");
           }}
         >
-          <Link to='/contactus'>Contact Us</Link>{menu === "contact" ? <hr /> : <></>}
+          <Link to="/contactus">Contact Us</Link>
+          {menu === "contact" ? <hr /> : <></>}
         </li>
+    
       </ul>
 
       <div className="nav-login-cart">
-        <div className="nav-cart-count">1+</div>
-        <Link to='/cart'> <ion-icon id="cart-icon" name="cart-outline"></ion-icon></Link>
-        <ion-icon ref={ref}
-          onClick={() => {
-            setOpen(!open);
-          }}
-          id="menu-icon"
-          name={`${open ? "close-outline" : "menu"}`}
-        ></ion-icon>
+          <div className="nav-cart-count">1+</div>
+          <Link to="/cart">
+            {" "}
+            <ion-icon id="cart-icon" name="cart-outline"></ion-icon>
+          </Link>
+          <ion-icon
+            ref={ref}
+            onClick={() => {
+              setOpen(!open);
+            }}
+            id="menu-icon"
+            name={`${open ? "close-outline" : "menu"}`}
+          ></ion-icon>
+        </div>
+
       </div>
+
+
+  
     </div>
   );
 };
