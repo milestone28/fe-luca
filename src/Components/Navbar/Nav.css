@@ -1,5 +1,5 @@
 .navbar{
-    position: fixed;
+    position: sticky;
     width: 100%;
     top: 0;
     right: 0;
@@ -7,9 +7,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 28px 12%;
+    padding: 20px 12%;
     background: #F2EDE8;
     transition: all .50s ease;
+    
+}
+
+.navbar.active{
+    background-color: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 .nav-logo{
@@ -147,7 +153,7 @@ color: #E2CFCA;
     } 
 
     .nav-menu li{ 
-        display: block;
+        display: hide;
         margin: 12px 0;
         padding: 0px 1px;
         transition: all .50s ease;
