@@ -3,14 +3,14 @@
     width: 100%;
     top: 0;
     right: 0;
-    z-index: 1000;
+    z-index: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 12%;
-    background: #F2EDE8;
+    background: #F2EDE8 !important;
     transition: all .50s ease;
-    
+
 }
 
 .navbar.active{
@@ -21,6 +21,7 @@
 .nav-logo{
     display: flex;
     align-items: center;
+    
 }
 
 .nav-logo p {
@@ -44,6 +45,8 @@
     color: #725654;
     font-style: 20px;
     font-weight: 500;
+    z-index: -1;
+    background: #F2EDE8;
 }
 
 .nav-menu li {
@@ -78,19 +81,6 @@ color: #E2CFCA;
 .nav-login-cart :hover {
     color: #E2CFCA;
 }
-
-/* .nav-login-cart button{
-    width: 157px;
-    height: 58px;
-    outline: none;
-    border: 1px solid #725654;
-    border-radius: 75px;
-    font-style: 20px;
-    font-weight: 500;
-    background: white;
-    cursor: pointer;
-    visibility: hidden;
-} */
 
 
 
@@ -133,23 +123,30 @@ color: #E2CFCA;
 
 @media (max-width: 1090px) 
 {
+
+    .navbar{
+        padding: 20px 5%;
+    }
     .nav-login-cart #menu-icon {
         display: block;
     }
 
      .nav-menu{
         position: absolute;
-        top: 100%; 
-        right: -100%;
+        top: -1000%; 
+        right: 0;
         width: 100%;
         height: auto;
         background: #F2EDE8;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        border-radius: 0 0 0 10px;
-        transition: all .50s ease;
-        gap: 10px;
+        border-radius: 0 0 10px  10px;
+        /* transition: all .50s ease; */
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+        gap: 2px;
     } 
 
     .nav-menu li{ 
@@ -183,9 +180,17 @@ color: #E2CFCA;
     }
 
     .nav-menu.open{ 
-        right: 0%;
-    }
+        top: 100%;
+        visibility: visible;
+      opacity: 1;
+      
+      transition-delay: 0s;
 
+    }
+    .navbar.open{
+        background-color: white;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    }
     .nav-logo p {
         width: 250px;
         font-size: 23px;
