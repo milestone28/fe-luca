@@ -8,7 +8,8 @@ const Featured = () => {
           <h1>Handmade Bakery, 
           <br/>Loaves...
           </h1>
-          <p>We make real bread from the best organic ingredients <br />- by hand, with dedication and with the best of care.</p>
+          <p>We make real bread from the best organic ingredients </p>
+          <p>- by hand, with dedication and with the best of care.</p>
         <div className="menu-button">
           <div>See Our Menu</div>
         </div>

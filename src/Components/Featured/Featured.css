@@ -20,13 +20,13 @@
 .left h1 {
     color: #725654;
     font-size: 63px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 120%;
 }
 
 .left p {
     color: #725654;
-    margin-bottom: 10px;
+   line-height: 1px;
     font-style: italic;
 }
 
@@ -81,6 +81,10 @@
     .right {
         width: 100%;
       }
+
+      .left p {
+       line-height: 120%;
+    }
 }
 
   .featured:after {
