@@ -26,7 +26,7 @@ const Nav = () => {
     <div className={active || pathname !== "/" ? "navbar active" : "navbar"}>
       <div className="nav-logo">
         <img src={logo} alt="" />
-        <p><span>L</span>uka's <span>L</span>oaves</p>
+        <p>Luka's Loaves</p>
       </div>
 
       <div className="right-menu">
