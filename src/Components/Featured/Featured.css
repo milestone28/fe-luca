@@ -5,7 +5,11 @@
   background-color: #f2ede8;
   padding: 3% 12% 0;
 }
-
+.featured:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .left {
   flex: 1;
   display: flex;
@@ -85,8 +89,4 @@
   }
 }
 
-.featured:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+

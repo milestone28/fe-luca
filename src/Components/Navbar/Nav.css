@@ -25,7 +25,7 @@
 }
 
 .nav-logo img{
-    width: 30%;
+    width: 60px;
     height: 50px;
     margin-right: 5px;
 }
@@ -34,6 +34,7 @@
     color: #725654;
     width: 350px;
     font-size: 25px;
+    font-family: roboto;
 }
 
 .nav-logo span{
