@@ -10,6 +10,7 @@
     padding: 10px 12%;
     background: #F2EDE8 !important;
     transition: all .50s ease;
+    font-family: Roboto;
 }
 
 .navbar.active{
@@ -34,7 +35,6 @@
     color: #725654;
     width: 350px;
     font-size: 25px;
-    font-family: roboto;
 }
 
 .nav-logo span{
@@ -48,7 +48,6 @@
     gap: 35px;
     color: #725654;
     font-style: 20px;
-    font-weight: 500;
     margin-right: 10%;
     background: #F2EDE8;
 }
