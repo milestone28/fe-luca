@@ -17,11 +17,11 @@ const Footer = () => {
           <div className="footer-right">
             <div className="div-block-3">
               <ul className="footer-links">
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Terms & Conditions</li>
-                <li>Menu</li>
-                <li>Contact Us</li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/aboutus">About Us</a></li>
+                
+                <li><a href="/menu">Menu</a></li>
+                <li><a href="/contactus">Contact Us</a></li>
               </ul>
 
               <div className="text-block-2">

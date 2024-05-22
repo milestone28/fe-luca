@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import useOnclickOutside from "react-cool-onclickoutside";
 import "./Nav.css";
 import logo from "../Assets/bread.png";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 
 const Nav = () => {
   const [menu, setMenu] = useState("home");
@@ -16,6 +16,7 @@ const Nav = () => {
   };
 
   useEffect(() => {
+    setMenu(pathname);
     window.addEventListener("scroll", isActive);
     return () => {
       window.removeEventListener("scroll", isActive);
@@ -30,44 +31,42 @@ const Nav = () => {
       </div>
 
       <div className="right-menu">
+        <ul className={`nav-menu ${open ? "open" : ""}`} ref={ref}>
+          <li
+            onClick={() => {
+              setOpen(false);
+            }}
+          >
+            <Link to="/">Home</Link>
+            {pathname === "/" ? <hr /> : <></>}
+          </li>
+          <li
+            onClick={() => {
+              setOpen(false);
+            }}
+          >
+            <Link to="/menu">Menu</Link>
+            {pathname === "/menu" ? <hr /> : <></>}
+          </li>
+          <li
+            onClick={() => {
+              setOpen(false);
+            }}
+          >
+            <Link to="/aboutus">About Us</Link>
+            {pathname === "/aboutus" ? <hr /> : <></>}
+          </li>
+          <li
+            onClick={() => {
+              setOpen(false);
+            }}
+          >
+            <Link to="/contactus">Contact Us</Link>
+            {pathname === "/contactus" ? <hr /> : <></>}
+          </li>
+        </ul>
 
-      <ul className={`nav-menu ${open ? "open" : ""}`} ref={ref}>
-        <li
-          onClick={() => {
-            setMenu("home");
-          }}
-        >
-          <Link to="/">Home</Link>
-          {menu === "home" ? <hr /> : <></>}
-        </li>
-        <li
-          onClick={() => {
-            setMenu("menu");
-          }}
-        >
-          <Link to="/menu">Menu</Link>
-          {menu === "menu" ? <hr /> : <></>}
-        </li>
-        <li
-          onClick={() => {
-            setMenu("about");
-          }}
-        >
-          <Link to="/aboutus">About Us</Link>
-          {menu === "about" ? <hr /> : <></>}
-        </li>
-        <li
-          onClick={() => {
-            setMenu("contact");
-          }}
-        >
-          <Link to="/contactus">Contact Us</Link>
-          {menu === "contact" ? <hr /> : <></>}
-        </li>
-    
-      </ul>
-
-      <div className="nav-login-cart">
+        <div className="nav-login-cart">
           <div className="nav-cart-count">1+</div>
           <Link to="/cart">
             {" "}
@@ -82,11 +81,7 @@ const Nav = () => {
             name={`${open ? "close-outline" : "menu"}`}
           ></ion-icon>
         </div>
-
       </div>
-
-
-  
     </div>
   );
 };

@@ -93,8 +93,8 @@
 
 .footer-links li {
   cursor: pointer;
-  max-width: 100%;
-  display: block;
+  width: 100px;
+  display: inline-block;
 }
 
 .footer-links li:hover {
