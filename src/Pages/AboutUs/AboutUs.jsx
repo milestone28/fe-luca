@@ -5,6 +5,7 @@ import NewsLetter from "../../Components/NewsLetter/NewsLetter";
 import luca from "../../Components/Assets/luca.png";
 import luca_class from "../../Components/Assets/luca_class.png";
 import sourdough from "../../Components/Assets/the_sourdough.png";
+import { Link } from "react-router-dom";
 const AboutUs = () => {
   return (
     <div>
@@ -105,13 +106,19 @@ const AboutUs = () => {
           {/* <!-- Content --> */}
           <div class="flex flex-1 flex-col items-center lg:items-start text-bookmark-fonts">
             <h2 class=" text-6xl md:text-4 lg:text-7xl text-center lg:text-left mb-6">
-              Luca
+              Classes
             </h2>
-            <p class=" text-2xl text-center lg:text-left mb-6">
-              My name is luca, I commenced my career as a lifeguard but was laid
-              off. I found the joy of making bread and experimented and in no
-              time at all had built up a thriving business.
+            <p class=" text-2xl text-center lg:text-left mb-2">
+              We also offer Sourdough breadmaking classes: <br /> First Saturday
+              of every month. 9am to 5pm with lunch provided. <br />
+              Learn to make your own bread for only $350 plus GST.
             </p>
+            <Link
+              to="/contactus"
+              class="text-center bg-bookmark-fonts text-white rounded-2xl w-1/2 py-2 mt-6 transition duration-300 ease-in-out transform hover:text-gray-500 hover:bg-white hover:scale-105 hover:border-gray-400 hover:border-2"
+            >
+              Contact Us
+            </Link>
           </div>
           {/* <!-- Image --> */}
           <div class="flex justify-center flex-1 mb-2 md:mb-16 lg:mb-0 z-0">
@@ -122,7 +129,6 @@ const AboutUs = () => {
             />
           </div>
         </div>
-
       </section>
       <NewsLetter />
       <Footer />
