@@ -1,6 +1,6 @@
 import React from 'react'
 import './Offers.css'
-import luca_image from '../Assets/luca.png'
+import luca_image from '../Assets/Luca_front.png'
 
 const Offers = () => {
   return (

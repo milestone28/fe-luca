@@ -1,11 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import useOnclickOutside from "react-cool-onclickoutside";
 import "./Nav.css";
 import logo from "../Assets/bread.png";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import SideMenu from "../../Components/SideMenu";
+import { CartContext } from "../../App";
 
 const Nav = () => {
-  const [menu, setMenu] = useState("home");
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+  const [isOpen, setIsOpen] = useState(false);
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
   const closeMenu = () => setOpen(false);
@@ -14,15 +19,16 @@ const Nav = () => {
   const isActive = () => {
     window.scrollY > 0 ? setActive(true) : setActive(false);
   };
-
+  const [cart] = useContext(CartContext);
+  
   useEffect(() => {
-    setMenu(pathname);
     window.addEventListener("scroll", isActive);
     return () => {
       window.removeEventListener("scroll", isActive);
     };
   }, []);
 
+  
   return (
     <div className={active || pathname !== "/" ? "navbar active" : "navbar"}>
       <div className="nav-logo">
@@ -65,13 +71,16 @@ const Nav = () => {
             {pathname === "/contactus" ? <hr /> : <></>}
           </li>
         </ul>
-
+        <SideMenu isOpen={isOpen} onClose={() => setIsOpen(false)} />
         <div className="nav-login-cart">
-          <div className="nav-cart-count">1+</div>
-          <Link to="/cart">
-            {" "}
-            <ion-icon id="cart-icon" name="cart-outline"></ion-icon>
-          </Link>
+          <div className="nav-cart-count">{cart.length > 9 ? ('9+'): (cart.length)}</div>
+
+          <ion-icon
+            id="cart-icon"
+            name="cart-outline"
+            onClick={toggleMenu}
+          ></ion-icon>
+
           <ion-icon
             ref={ref}
             onClick={() => {
