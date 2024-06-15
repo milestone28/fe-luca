@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/fe-luca/static/css/main.cb66552a.css",
+    "main.js": "/fe-luca/static/js/main.a6a27586.js",
+    "static/media/the_sourdough.png": "/fe-luca/static/media/the_sourdough.04d60d6573e35e7e7c36.png",
+    "static/media/featureBread.png": "/fe-luca/static/media/featureBread.f06c3eacd0da072357b2.png",
+    "static/media/sourdough_spelt.png": "/fe-luca/static/media/sourdough_spelt.a9e8799cdeb293c0b2cf.png",
+    "static/media/sourdough_seeded.png": "/fe-luca/static/media/sourdough_seeded.43cd2b5b5f790582cdf5.png",
+    "static/media/sourdough_rye.png": "/fe-luca/static/media/sourdough_rye.30573c509c00ec342932.png",
+    "static/media/luca.png": "/fe-luca/static/media/luca.db2731603d79cbd45fec.png",
+    "static/media/sourdough_white.png": "/fe-luca/static/media/sourdough_white.e5236070bcb5979686f5.png",
+    "static/media/luca_class.png": "/fe-luca/static/media/luca_class.21800352a0aaf7baf685.png",
+    "static/media/Luca_front.png": "/fe-luca/static/media/Luca_front.7160318013f5c84fcf3a.png",
+    "static/media/bread.png": "/fe-luca/static/media/bread.b406f3586d45baa13bd8.png",
+    "index.html": "/fe-luca/index.html",
+    "main.cb66552a.css.map": "/fe-luca/static/css/main.cb66552a.css.map",
+    "main.a6a27586.js.map": "/fe-luca/static/js/main.a6a27586.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cb66552a.css",
+    "static/js/main.a6a27586.js"
+  ]
+}
